@@ -17,3 +17,5 @@ spring.cloud.stream:
     binder:
       brokers: localhost:9092
       applicationId: myDomainProcessorApp
+elasticsearch:
+   server: localhost:9200
