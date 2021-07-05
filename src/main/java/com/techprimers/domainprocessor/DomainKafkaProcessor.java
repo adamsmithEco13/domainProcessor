@@ -22,8 +22,7 @@ public class DomainKafkaProcessor {
 	@Bean
 	public Function<KStream<String, String>, KStream<String, String>> domainProcessor() {
 		return kstream -> kstream.mapValues(value -> {
-			streamBridge.send("hello", value.toUpperCase());
-			return value;
+			return value.toUpperCase();
 		});
 	}
 
